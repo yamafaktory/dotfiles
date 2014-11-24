@@ -1,0 +1,2 @@
+zstyle ':prezto:load' pmodule 'environment' 'utility' 'prompt' 'completion' 'terminal' 'git' 'node' 'tmux'
+zstyle ':prezto:module:prompt' theme 'paradox'
