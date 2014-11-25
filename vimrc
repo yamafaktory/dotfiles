@@ -14,10 +14,10 @@ Plug 'airblade/vim-gitgutter'
 Plug 'scrooloose/nerdtree'
 Plug 'edkolev/tmuxline.vim'
 Plug 'junegunn/seoul256.vim'
+Plug 'tpope/vim-fugitive'
 call plug#end()
 
 " General
-set laststatus=2
 set smartindent
 set tabstop=2
 set shiftwidth=2
@@ -32,11 +32,18 @@ set encoding=utf-8
 set fileencoding=utf-8
 set incsearch
 set hlsearch
+set ttyfast
+set shortmess=atI
 
 " Color theme
 set t_Co=256
+set t_ut=
+set colorcolumn=+1
 colorscheme seoul256 
 set background=dark
+
+" Vim-airline
+set laststatus=2
 
 " JavaScript code folding
 au FileType javascript call JavaScriptFold()
