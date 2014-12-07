@@ -1,2 +1,19 @@
-zstyle ':prezto:load' pmodule 'environment' 'utility' 'prompt' 'completion' 'terminal' 'git' 'node' 'tmux'
-zstyle ':prezto:module:prompt' theme 'paradox'
+zstyle ':prezto:*:*' color 'yes'
+
+zstyle ':prezto:load' pmodule \
+  'environment' \
+  'terminal' \
+  'editor' \
+  'history' \
+  'git' \
+  'spectrum' \
+  'tmux' \
+  'utility' \
+  'completion' \
+  'prompt' \
+  'node' 
+
+zstyle ':prezto:module:editor' key-bindings 'vi'
+zstyle ':prezto:module:prompt' theme 'agnoster'
+zstyle ':prezto:module:tmux:auto-start' local 'yes'
+zstyle ':prezto:module:tmux:auto-start' remote 'yes'

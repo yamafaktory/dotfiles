@@ -34,6 +34,7 @@ set incsearch
 set hlsearch
 set ttyfast
 set shortmess=atI
+set nowrap
 
 " Color theme
 set t_Co=256
