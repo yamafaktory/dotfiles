@@ -24,6 +24,11 @@ call plug#end()
 " General
 set noswapfile
 set nobackup
+set nowritebackup
+set showcmd
+set autoread
+set autowrite
+set autowriteall
 set wildmenu
 set wildmode=longest:list,full
 set showmatch
@@ -57,6 +62,7 @@ map <C-l> <C-W>l
 set t_Co=256
 set t_ut= "fix background issues
 set colorcolumn=+1
+set textwidth=80
 colorscheme seoul256 
 set background=dark
 
@@ -70,4 +76,5 @@ au FileType javascript call JavaScriptFold()
 " NERDTree
 map <C-n> :NERDTreeToggle<CR>
 let g:NERDTreeChDirMode=2
+let g:NERDTreeMinimalUI=1
 
