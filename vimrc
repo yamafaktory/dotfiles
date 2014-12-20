@@ -9,16 +9,20 @@ call plug#begin()
 Plug 'airblade/vim-gitgutter'
 Plug 'bling/vim-airline'
 Plug 'christoomey/vim-tmux-navigator'
+Plug 'ConradIrwin/vim-bracketed-paste'
 Plug 'edkolev/tmuxline.vim'
 Plug 'groenewege/vim-less'
 Plug 'jelera/vim-javascript-syntax'
+Plug 'junegunn/rainbow_parentheses.vim'
 Plug 'junegunn/seoul256.vim'
+Plug 'junegunn/vim-easy-align'
 Plug 'majutsushi/tagbar'
 Plug 'pangloss/vim-javascript'
 Plug 'scrooloose/nerdtree'
 Plug 'scrooloose/syntastic'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
+Plug 'Yggdroot/indentLine'
 call plug#end()
 
 " General
@@ -26,6 +30,7 @@ set noswapfile
 set nobackup
 set nowritebackup
 set showcmd
+set lazyredraw
 set autoread
 set autowrite
 set autowriteall
@@ -77,4 +82,13 @@ au FileType javascript call JavaScriptFold()
 map <C-n> :NERDTreeToggle<CR>
 let g:NERDTreeChDirMode=2
 let g:NERDTreeMinimalUI=1
+let g:NERDTreeShowHidden=1
 
+" Start interactive EasyAlign in visual mode
+xmap <Enter> <Plug>(EasyAlign)
+
+" Start interactive EasyAlign with a Vim movement
+nmap ga <Plug>(EasyAlign)
+
+" Rainbow parentheses always on
+au VimEnter * RainbowParentheses
