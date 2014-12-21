@@ -13,6 +13,7 @@ Plug 'ConradIrwin/vim-bracketed-paste'
 Plug 'edkolev/tmuxline.vim'
 Plug 'groenewege/vim-less'
 Plug 'jelera/vim-javascript-syntax'
+Plug 'junegunn/limelight.vim'
 Plug 'junegunn/rainbow_parentheses.vim'
 Plug 'junegunn/seoul256.vim'
 Plug 'junegunn/vim-easy-align'
@@ -56,6 +57,7 @@ set hlsearch
 set ttyfast
 set shortmess=atI
 set nowrap
+set list listchars=tab:»·,trail:·
 
 " Split keybindings
 map <C-j> <C-W>j
@@ -73,6 +75,7 @@ set background=dark
 
 " Vim-airline
 set laststatus=2
+let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled=1
 
 " JavaScript code folding
@@ -92,3 +95,6 @@ nmap ga <Plug>(EasyAlign)
 
 " Rainbow parentheses always on
 au VimEnter * RainbowParentheses
+
+" Limelight on
+au VimEnter * Limelight0.7

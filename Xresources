@@ -1,23 +1,27 @@
-!Urxvt main settings
+! Urxvt main settings
 URxvt*termName: rxvt-unicode-256color
 URxvt*imLocale: en_US.UTF8
-URxvt.geometry: 100x25
-URxvt.depth: 32
+URxvt*geometry: 100x25
+URxvt*depth: 32
 URxvt*buffered: true
 URxvt*loginShell: true
-URxvt*font: xft:Source Code Pro for Powerline:size=12:antialias=true
-URxvt.letterSpace: -1
-URxvt.title: yamafaktory
-URxvt.saveLines: 1024
-URxvt.scrollBar: false
-URxvt.scrollstyle: plain
-URxvt.scrollTtyOutput: false
-URxvt.scrollWithBuffer: true
-URxvt.scrollTtyKeypress: true
+! Fix font display thanks to
+! https://powerline.readthedocs.org/en/master/tips-and-tricks.html#tips-and-tricks-urxvt
+URxvt*font: xft:Inconsolata-g\ for\ Powerline:size=12:antialias=true:hinting=true,\
+            xft:Inconsolata\ for\ Powerline:size=12:antialias=true:hinting=true
+URxvt*letterSpace: -1
+URxvt*title: yamafaktory
+URxvt*saveLines: 1024
+URxvt*scrollBar: false
+URxvt*scrollstyle: plain
+URxvt*scrollTtyOutput: false
+URxvt*scrollWithBuffer: true
+URxvt*scrollTtyKeypress: true
 URxvt*secondaryScroll: true
-URxvt.mouseWheelScrollPage: false
+URxvt*mouseWheelScrollPage: true
 
-!seoul256 theme
+! seoul256 theme
+! https://github.com/junegunn/seoul256.vim
 URxvt*background: #3a3a3a 
 URxvt*foreground: #d0d0d0 
 URxvt*color0: #4e4e4e
