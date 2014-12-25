@@ -20,8 +20,8 @@ Plug 'junegunn/seoul256.vim'
 Plug 'junegunn/vim-easy-align'
 Plug 'majutsushi/tagbar'
 Plug 'pangloss/vim-javascript'
-Plug 'scrooloose/nerdtree'
 Plug 'scrooloose/syntastic'
+Plug 'rking/ag.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
 Plug 'Yggdroot/indentLine'
@@ -83,6 +83,10 @@ set textwidth=80
 colorscheme seoul256 
 set background=dark
 
+" CtrlP
+let g:ctrlp_map='<Leader>p'
+let g:ctrl_cmp='CtrlPMixed'
+
 " Vim-airline
 set laststatus=2
 let g:airline_powerline_fonts=1
@@ -93,17 +97,12 @@ let g:airline#extensions#tabline#enabled=1
 " JavaScript code folding
 au FileType javascript call JavaScriptFold()
 
-" NERDTree
-map <C-n> :NERDTreeToggle<CR>
-let g:NERDTreeChDirMode=2
-let g:NERDTreeMinimalUI=1
-let g:NERDTreeShowHidden=1
+" Unite
+map <Leader>u :Unite file buffer<cr>
 
-" Start interactive EasyAlign in visual mode
-xmap <Enter> <Plug>(EasyAlign)
-
-" Start interactive EasyAlign with a Vim movement
-nmap ga <Plug>(EasyAlign)
+" EasyAlign
+xmap <Enter> <Plug>(EasyAlign) " Visual mode
+nmap ga <Plug>(EasyAlign) " Vim movement
 
 " Rainbow parentheses always on
 au VimEnter * RainbowParentheses
@@ -111,7 +110,10 @@ au VimEnter * RainbowParentheses
 " Limelight on
 au VimEnter * Limelight0.7
 
-" CtrlP
-let g:ctrlp_map='<c-p>'
-let g:ctrlp_cmd='CtrlP'
+" Silver Searcher
+if executable('ag')
+  set grepprg=ag\ --nogroup\ --nocolor
+  let g:ctrlp_user_command='ag %s -l --nocolor -g ""'
+  let g:ctrlp_use_caching=0
+endif
 
