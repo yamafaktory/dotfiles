@@ -10,6 +10,7 @@ Plug 'airblade/vim-gitgutter'
 Plug 'bling/vim-airline'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'ConradIrwin/vim-bracketed-paste'
+Plug 'ctrlpvim/ctrlp.vim'
 Plug 'edkolev/tmuxline.vim'
 Plug 'groenewege/vim-less'
 Plug 'jelera/vim-javascript-syntax'
@@ -27,37 +28,46 @@ Plug 'Yggdroot/indentLine'
 call plug#end()
 
 " General
-set noswapfile
-set nobackup
-set nowritebackup
-set showcmd
-set lazyredraw
 set autoread
 set autowrite
 set autowriteall
-set wildmenu
-set wildmode=longest:list,full
-set showmatch
-set mat=5
-set smartindent
-set tabstop=2
-set shiftwidth=2
+set cursorline
+set encoding=utf-8
 set expandtab
-set number
-set visualbell
+set fileencoding=utf-8
 set hidden
 set history=999
-set autoread
-set title
-set encoding=utf-8
-set fileencoding=utf-8
-set incsearch
-set ignorecase
 set hlsearch
-set ttyfast
-set shortmess=atI
-set nowrap
+set ignorecase
+set incsearch
+set noswapfile
+set nobackup
+set nowritebackup
+set lazyredraw
 set list listchars=tab:»·,trail:·
+set mat=5
+set nowrap
+set number
+set shiftwidth=2
+set shortmess=atI
+set showcmd
+set showmatch
+set smartindent
+set tabstop=2
+set title
+set ttyfast
+set visualbell
+set wildmenu
+set wildmode=longest:list,full
+
+" Leader
+let mapleader=' '
+let maplocalleader=' '
+
+" Buffers
+nnoremap <Leader>n :bn<cr>
+nnoremap <Leader>p :bp<cr>
+nnoremap <Leader>d :bd<cr>
 
 " Split keybindings
 map <C-j> <C-W>j
@@ -75,7 +85,9 @@ set background=dark
 
 " Vim-airline
 set laststatus=2
-let g:airline_powerline_fonts = 1
+let g:airline_powerline_fonts=1
+let g:airline#extensions#tabline#enabled=1
+let g:airline_theme='bubblegum'
 let g:airline#extensions#tabline#enabled=1
 
 " JavaScript code folding
@@ -98,3 +110,8 @@ au VimEnter * RainbowParentheses
 
 " Limelight on
 au VimEnter * Limelight0.7
+
+" CtrlP
+let g:ctrlp_map='<c-p>'
+let g:ctrlp_cmd='CtrlP'
+
