@@ -14,6 +14,6 @@ zstyle ':prezto:load' pmodule \
   'node' 
 
 zstyle ':prezto:module:editor' key-bindings 'vi'
-zstyle ':prezto:module:prompt' theme 'pure'
+zstyle ':prezto:module:prompt' theme 'agnoster'
 zstyle ':prezto:module:tmux:auto-start' local 'yes'
 zstyle ':prezto:module:tmux:auto-start' remote 'yes'

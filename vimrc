@@ -12,18 +12,18 @@ Plug 'christoomey/vim-tmux-navigator'
 Plug 'ConradIrwin/vim-bracketed-paste'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'edkolev/tmuxline.vim'
+Plug 'elzr/vim-json'
 Plug 'groenewege/vim-less'
 Plug 'jelera/vim-javascript-syntax'
-Plug 'junegunn/limelight.vim'
-Plug 'junegunn/rainbow_parentheses.vim'
-Plug 'junegunn/seoul256.vim'
 Plug 'junegunn/vim-easy-align'
 Plug 'majutsushi/tagbar'
 Plug 'pangloss/vim-javascript'
 Plug 'scrooloose/syntastic'
+Plug 'Shougo/neocomplete'
 Plug 'rking/ag.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
+Plug 'yamafaktory/lumberjack.vim'
 Plug 'Yggdroot/indentLine'
 call plug#end()
 
@@ -35,6 +35,10 @@ set cursorline
 set encoding=utf-8
 set expandtab
 set fileencoding=utf-8
+set foldignore=
+set foldlevelstart=99
+set foldmethod=indent
+set foldnestmax=20
 set hidden
 set history=999
 set hlsearch
@@ -80,8 +84,7 @@ set t_Co=256
 set t_ut= "fix background issues
 set colorcolumn=+1
 set textwidth=80
-colorscheme seoul256 
-set background=dark
+colorscheme lumberjack
 
 " CtrlP
 let g:ctrlp_map='<Leader>p'
@@ -91,24 +94,12 @@ let g:ctrl_cmp='CtrlPMixed'
 set laststatus=2
 let g:airline_powerline_fonts=1
 let g:airline#extensions#tabline#enabled=1
-let g:airline_theme='bubblegum'
+let g:airline_theme='wombat'
 let g:airline#extensions#tabline#enabled=1
-
-" JavaScript code folding
-au FileType javascript call JavaScriptFold()
-
-" Unite
-map <Leader>u :Unite file buffer<cr>
 
 " EasyAlign
 xmap <Enter> <Plug>(EasyAlign) " Visual mode
 nmap ga <Plug>(EasyAlign) " Vim movement
-
-" Rainbow parentheses always on
-au VimEnter * RainbowParentheses
-
-" Limelight on
-au VimEnter * Limelight0.7
 
 " Silver Searcher
 if executable('ag')
