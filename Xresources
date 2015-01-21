@@ -6,12 +6,10 @@ URxvt*geometry: 100x25
 URxvt*depth: 32
 URxvt*buffered: true
 URxvt*loginShell: true
-! Fix font display thanks to
-! https://powerline.readthedocs.org/en/master/tips-and-tricks.html#tips-and-tricks-urxvt
 URxvt*font: xft:Droid Sans Mono for Powerline:size=11
 URxvt*letterSpace: -1
 URxvt*title: yamafaktory
-URxvt*saveLines: 1024
+URxvt*saveLines: 10000
 URxvt*scrollBar: false
 URxvt*scrollstyle: plain
 URxvt*scrollTtyOutput: false
