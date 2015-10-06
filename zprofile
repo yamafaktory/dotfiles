@@ -1,3 +1,6 @@
+# Alias
+alias .="source"
+
 # Browser
 if [[ "$OSTYPE" == darwin* ]]; then
   export BROWSER='open'
